@@ -1,0 +1,43 @@
+{
+  "name": "cricketscoreapib",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter cricket-score-frontend dev & pnpm --filter cricketscoreapi dev",
+    "build": "pnpm --filter cricketscoreapi build && pnpm --filter cricket-score-frontend build",
+    "lint": "pnpm --filter cricket-score-frontend lint && pnpm --filter cricketscoreapi lint",
+    "test": "pnpm --filter cricketscoreapi test",
+    "test:coverage": "pnpm --filter cricketscoreapi test:coverage",
+    "format": "pnpm --filter cricketscoreapi format && prettier --write \"apps/**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "pnpm --filter cricketscoreapi format:check && prettier --check \"apps/**/*.{ts,tsx,js,jsx,json,md}\"",
+    "typecheck": "pnpm --filter cricketscoreapi build && pnpm --filter cricket-score-frontend type-check && pnpm --filter cricketscoreapi typecheck",
+    "docs": "pnpm --filter cricketscoreapi docs",
+    "frontend:dev": "pnpm --filter cricket-score-frontend dev",
+    "frontend:build": "pnpm --filter cricket-score-frontend build",
+    "frontend:start": "pnpm --filter cricket-score-frontend start",
+    "frontend:lint": "pnpm --filter cricket-score-frontend lint",
+    "frontend:lint:fix": "pnpm --filter cricket-score-frontend lint:fix",
+    "frontend:type-check": "pnpm --filter cricket-score-frontend type-check",
+    "frontend:ci": "pnpm --filter cricket-score-frontend ci",
+    "backend:dev": "pnpm --filter cricketscoreapi dev",
+    "backend:start": "pnpm --filter cricketscoreapi start",
+    "backend:build": "pnpm --filter cricketscoreapi build",
+    "backend:test": "pnpm --filter cricketscoreapi test",
+    "backend:test:coverage": "pnpm --filter cricketscoreapi test:coverage",
+    "backend:posttest": "pnpm --filter cricketscoreapi posttest",
+    "backend:lint": "pnpm --filter cricketscoreapi lint",
+    "backend:typecheck": "pnpm --filter cricketscoreapi typecheck",
+    "backend:docs": "pnpm --filter cricketscoreapi docs",
+    "backend:format": "pnpm --filter cricketscoreapi format",
+    "backend:format:check": "pnpm --filter cricketscoreapi format:check"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.17",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  }
+}
